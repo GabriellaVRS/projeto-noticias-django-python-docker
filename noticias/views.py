@@ -1,8 +1,10 @@
 #conteúdo das páginas
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 def index(request):
-    return HttpResponse('<h1>Notícias</h1>')
+    return render(request, 'noticias/index.html')
 
+def imagem(request):
+    return render(request, 'noticias/imagem.html')
 # Create your views here.
