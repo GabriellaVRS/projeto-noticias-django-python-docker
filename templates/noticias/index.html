@@ -1,4 +1,4 @@
-{% extends 'noticias/base.html' %}
+{% extends 'shared/base.html' %}
 {% load static %}
 {% block content %}
     
@@ -28,7 +28,7 @@
                                 {% if fotografia.foto == '' or fotografia.foto == null %}
                                     <img class="card__imagem" src="{% static '/assets/imagens/galeria/not-found.jpeg'%}" alt="foto">
                                 {% else %}
-                                <img class="card__imagem" src="{{fotografia.foto.url}}">
+                                    <img class="card__imagem" src="{{fotografia.foto.url}}">
                                 {% endif %}
                                 </a>
                                 <span class="card__tag">Estrelas</span>
