@@ -3,9 +3,9 @@
     <header class="cabecalho">
         <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
         {% for message in messages %}
-            <div class="alert alert-primary">
-                <p id="'messages">{{message}}</p>
-            </div>
+        <div class="alert alert-primary">
+            <p id="'messages">{{message}}</p>
+        </div>
         {% endfor %}
         <div class="cabecalho__busca">
             <div class="busca__fundo">
@@ -27,5 +27,6 @@
                 <a href="{% url 'login' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
                 <a href="{% url 'cadastro' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Cadastro</a>
                 <a href="{% url 'logout' %}"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
+                <a href="{% url 'nova_imagem' %}"><img src="{% static '/assets/ícones/1x/Mais curtidas - inativo.png' %}"> Nova Imagem</a>
             </nav>
         </section>
