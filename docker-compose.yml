@@ -1,0 +1,16 @@
+version: '3.9'
+services: 
+  app:
+    build: 
+      dockerfile: ./Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    environment: &env 
+      - SECRET_KEY = django-insecure-2u)r1=_fz_$_rvpvh8xb)fg9bsg3$x+qfkm8(eebraj^6s#8d9
+      - AWS_ACCESS_KEY_ID = AKIAVBUN3HLXWASWHAHZ
+      - AWS_SECRET_ACCESS_KEY = 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
+      - AWS_STORAGE_BUCKET_NAME = plataforma-noticias 
+    ports:
+      - 8000:8000
+        
