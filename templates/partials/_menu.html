@@ -1,7 +1,7 @@
 {% load static %}
 <div class="pagina-inicial">
     <header class="cabecalho">
-        <img src="{% static 'assets/logo/Logo.png' %}" alt="Logo " />
+        <img src="{% static 'assets/logo/Logo(3).png' %}" alt="Logo " />
         {% for message in messages %}
         <div class="alert alert-primary">
             <p id="'messages">{{message}}</p>
@@ -27,6 +27,6 @@
                 <a href="{% url 'login' %}"><img src="{% static 'assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
                 <a href="{% url 'cadastro' %}"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Cadastro</a>
                 <a href="{% url 'logout' %}"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
-                <a href="{% url 'nova_imagem' %}"><img src="{% static 'assets/ícones/1x/Mais curtidas - inativo.png' %}"> Nova Imagem</a>
+                <a href="{% url 'nova_imagem' %}"><img src="{% static 'assets/ícones/1x/Mais curtidas - inativo.png' %}"> Nova Notícia</a>
             </nav>
         </section>

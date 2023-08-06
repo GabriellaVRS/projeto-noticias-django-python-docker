@@ -4,7 +4,7 @@
     
             <section class="conteudo">
                 <section class="banner">
-                    <img class="banner__imagem" src="{% static 'assets/imagens/Banner(2).png' %}" alt="banner Alura Space">
+                    <img class="banner__imagem" src="{% static 'assets/imagens/Banner(2).png' %}" alt="banner">
                     <h1 class="banner__titulo"> As notícias mais completas do espaço!</h1>
                 </section>
                 <section class="tags">
@@ -16,7 +16,7 @@
                         <li class="tags__tag"><a href="{% url 'filtro' 'PLANETA' %}" class="btn" style="color: #c9c9c9;">Planeta</a></li>
                     </ul>
                 </section>
-                <section class="noticias">
+                <section class="fotografias">
                     
                     <div class="cards">
                         <h2 class="cards__titulo">Navegue pela noticias</h2>
@@ -31,7 +31,7 @@
                                     <img class="card__imagem" src="{{fotografia.foto.url}}">
                                 {% endif %}
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                
                                 <div class="card__info">
                                     <p class="card__titulo">{{fotografia.nome}}</p>
                                     <div class="card__texto">
@@ -45,7 +45,7 @@
                             {% endfor %}
                             {% else %}
                             <div class="imagem_texto">
-                                <p>Fotograia não encontrada</p>
+                                <p>Notícia não encontrada</p>
                             </div>
                             {% endif %}
                         </ul>
