@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'apps.noticias.apps.NoticiasConfig',
     'apps.usuarios.apps.UsuariosConfig',
+  
+    
     
     'storages'
 ]
