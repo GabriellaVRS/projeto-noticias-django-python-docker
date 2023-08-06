@@ -1,8 +1,10 @@
 from django import forms
 from apps.noticias.models import Fotografia
+from braces.views import GroupRequiredMixin
 
 class FotografiaForms(forms.ModelForm):
     class Meta:
+        
         model = Fotografia
         exclude = ['publicada',]
         labels = {

@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from apps.noticias.models import Fotografia
 from django.contrib import messages
 from apps.noticias.forms import FotografiaForms
+from braces.views import GroupRequiredMixin
 
 def index(request):
     if not request.user.is_authenticated:
@@ -46,6 +47,7 @@ def nova_imagem(request):
             return redirect('index')
     return render(request, 'noticias/nova_imagem.html', {'form': form})
 
+
 def editar_imagem(request, foto_id):
     if not request.user.is_authenticated:
         messages.error(request, 'Usuário não logado')
@@ -53,6 +55,7 @@ def editar_imagem(request, foto_id):
 
     fotografia = Fotografia.objects.get(id=foto_id)
     form = FotografiaForms(instance=fotografia)
+    
 
     if request.method == 'POST':
         form = FotografiaForms(request.POST, request.FILES, instance=fotografia)
@@ -76,3 +79,4 @@ def deletar_imagem(request, foto_id):
 def filtro(request, categoria):
     fotografias = Fotografia.objects.order_by('data_fotografia').filter(publicada=True, categoria=categoria)
     return render(request, 'noticias/index.html', {'cards': fotografias})
+
