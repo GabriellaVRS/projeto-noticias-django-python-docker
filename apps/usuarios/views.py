@@ -3,6 +3,9 @@ from apps.usuarios.forms import LoginForms, CadastroForms
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib import messages
+from django.views.generic import TemplateView
+from django.views.generic.edit import CreateView
+
 
 
 def login(request):
